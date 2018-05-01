@@ -2,7 +2,7 @@
 defined( 'ABSPATH' ) or die( 'Nope, not accessing this' );
 /*
 Plugin Name: Featured Circles
-Plugin URI:  http://www.rees.solutions
+Plugin URI:  https://github.com/Sental/wp_featured_circles
 Description: Creates circles to show featured items for a website.
 Version:     1.0.0
 Author:      Mark Rees
