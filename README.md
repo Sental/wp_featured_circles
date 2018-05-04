@@ -8,4 +8,4 @@ The shortcode is ['wp_circles']
 *NEW Feature*
 Theme Hook
 A basic theme hook has been added to display all featured circles. Copy and paste the following code into your template where you would like it displayed.
-<?php echo $theme_hook->circle_theme_output(); ?>
+'<?php echo $theme_hook->circle_theme_output(); ?>'
