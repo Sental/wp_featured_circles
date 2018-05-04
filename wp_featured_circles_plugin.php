@@ -217,7 +217,6 @@ public function get_circles_output($arguments = ""){
     $circles = get_posts($circle_args);
     //if we have locations 
     if($circles){
-$html .= '<hr />';
         $html .= '<article class="circle_list cf">';
         //foreach location
         foreach($circles as $circle){
@@ -323,6 +322,10 @@ public function enqueue_public_scripts_and_styles(){
 include(plugin_dir_path(__FILE__) . 'inc/wp_circles_shortcode.php');
 //include widgets
 include(plugin_dir_path(__FILE__) . 'inc/wp_circles_widget.php');
+//include settings
+include(plugin_dir_path(__FILE__) . 'inc/wp_featured_circles_settings.php');
+//include theme hook
+include(plugin_dir_path(__FILE__) . 'inc/theme_hook.php');
 
 $wp_featured_circles = new wp_featured_circles;
 ?>
