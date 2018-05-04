@@ -45,7 +45,7 @@ public function __construct(){
             </select>
         </p>
         <p>
-            <small>If you want to display multiple locations select how many below</small><br/>
+            <small>If you want to display multiple circless select how many below</small><br/>
             <label for="<?php echo $this->get_field_id('number_of_circles'); ?>">Number of Circles</label>
             <select class="widefat" name="<?php echo $this->get_field_name('number_of_circles'); ?>" id="<?php echo $this->get_field_id('number_of_circles'); ?>" value="<?php echo $number_of_circles; ?>">
                 <option value="default" <?php if($number_of_circles == 'default'){ echo 'selected';}?>>All Circles</option>
@@ -92,7 +92,7 @@ public function widget( $args, $instance ) {
         $arguments['number_of_circles'] = $instance['number_of_circles'];
     }
 
-	$test = $wp_featured_circles->get_circles_output($arguments);
+    $test = $wp_featured_circles->get_circles_output($arguments);
 	
     //get the output
     $html = '';
