@@ -214,7 +214,7 @@ public function get_circles_output($arguments = ""){
 
     //output
     $html = '';
-    $circles = get_posts($circle_args);
+    $circles = array_reverse(get_posts($circle_args));
     //if we have locations 
     if($circles){
         $html .= '<article class="circle_list cf">';
@@ -231,28 +231,28 @@ public function get_circles_output($arguments = ""){
                 }
                 $wp_circle_permalink = get_permalink($wp_circle_id);
                 $wp_circle_link = get_post_meta($wp_circle_id, 'wp_circle', true);
+                $link = '<a href="' . $wp_circle_link . '">' . $wp_circle_thumbnail . '</a>';
 
                 //apply the filter before our main content starts 
                 //(lets third parties hook into the HTML output to output data)
                 $html = apply_filters('wp_circle_before_main_content', $html);
 
-                //title
-                $html .= '<h2 class="title">';
-                    $html .= '<a href="' . $wp_circle_permalink . '" title="view circle">';
-                        $html .= $wp_circle_title;
-                    $html .= '</a>';
-               $html .= '</h2>';
-
-
                 //image & content
                 if(!empty($wp_circle_thumbnail) || !empty($wp_circle_content)){
                 //phone & email output
                 if(!empty($wp_circle_link)){
-                    $link .= '<a href="' . $wp_circle_link . '">' . $wp_circle_thumbnail . '</a>';
+                    
                     $html .= $link;}
                     else {
                     if(!empty($wp_circle_thumbnail)){
                         $html .= $wp_circle_thumbnail;}}
+
+                //title
+                $html .= '<h3 class="title">';
+                    $html .= '<a href="' . $wp_circle_link . '" title="view circle">';
+                        $html .= $wp_circle_title;
+                    $html .= '</a>';
+               $html .= '</h3>';
 
                     $html .= '<p class="image_content">';
                     if(!empty($wp_circle_content)){
