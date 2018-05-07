@@ -19,6 +19,7 @@
     min-height: 150px;
     width: 300px;
     height: 300px;
+    margin: auto;
 }
 .widget > .circle_list > .circle {
     display = table;
@@ -27,6 +28,7 @@
 .widget > .circle_list > .circle > a > img {
     width: 150px;
     height: 150px;
+    margin-left: 15%;
 }
 
 .circle {
