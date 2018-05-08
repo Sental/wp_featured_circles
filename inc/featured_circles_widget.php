@@ -6,7 +6,7 @@ class featured_circle_widget extends WP_widget{
 public function __construct(){
     //set base values for the widget (override parent)
     parent::__construct(
-        'wp_circle_widget',
+        'featured_circle_widget',
         'Featured Circles Widget', 
         array('description' => 'A widget that displays your featured circles')
     );
@@ -92,7 +92,7 @@ public function widget( $args, $instance ) {
         $arguments['number_of_circles'] = $instance['number_of_circles'];
     }
 
-    $test = $wp_featured_circles->get_circles_output($arguments);
+    $test = $featured_circles->get_circles_output($arguments);
 	
     //get the output
     $html = '';
@@ -114,10 +114,10 @@ public function widget( $args, $instance ) {
 	
 //registers our widget for use
 public function register_wp_circle_widgets(){
-    register_widget('wp_circle_widget');
+    register_widget('featured_circle_widget');
 }
 	
 }
 
-$featured_circle_widget = new featured_circle_widget_circle_widget;
+$featured_circle_widget = new featured_circle_widget;
 ?>
