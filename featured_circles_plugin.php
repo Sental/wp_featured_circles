@@ -11,7 +11,7 @@ License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-class wp_featured_circles{
+class featured_circles{
 	
 //magic function (triggered on initialization)
 public function __construct(){
@@ -307,25 +307,25 @@ public function save_circle($post_id){
 
 //enqueus scripts and stles on the back end
 public function enqueue_admin_scripts_and_styles(){
-    wp_enqueue_style('wp_circle_admin_styles', plugin_dir_url(__FILE__) . '/css/wp_circles_admin_styles.css');
+    wp_enqueue_style('featured_circle_admin_styles', plugin_dir_url(__FILE__) . '/css/featured_circles_admin_styles.css');
 }
 
 //enqueues scripts and styled on the front end
 public function enqueue_public_scripts_and_styles(){
-    wp_enqueue_style('wp_circle_public_styles', plugin_dir_url(__FILE__). '/css/wp_circles_public_styles.css');
+    wp_enqueue_style('featured_circle_public_styles', plugin_dir_url(__FILE__). '/css/featured_circles_public_styles.css');
 
 }
 
 }
 
 //include shortcodes
-include(plugin_dir_path(__FILE__) . 'inc/wp_circles_shortcode.php');
+include(plugin_dir_path(__FILE__) . 'inc/featured_circles_shortcode.php');
 //include widgets
-include(plugin_dir_path(__FILE__) . 'inc/wp_circles_widget.php');
+include(plugin_dir_path(__FILE__) . 'inc/featured_circles_widget.php');
 //include settings
-include(plugin_dir_path(__FILE__) . 'inc/wp_featured_circles_settings.php');
+include(plugin_dir_path(__FILE__) . 'inc/featured_circles_settings.php');
 //include theme hook
-include(plugin_dir_path(__FILE__) . 'inc/theme_hook.php');
+include(plugin_dir_path(__FILE__) . 'inc/featured_circles_theme_hook.php');
 
-$wp_featured_circles = new wp_featured_circles;
+$featured_circles = new featured_circles;
 ?>

@@ -1,5 +1,5 @@
 <?php
-class MySettingsPage
+class featured_circles_MySettingsPage
 {
     /**
      * Holds the values to be used in the fields callbacks
@@ -117,5 +117,5 @@ class MySettingsPage
 }
 
 if( is_admin() )
-    $my_settings_page = new MySettingsPage();
+    $featured_circles_my_settings_page = new featured_circles_MySettingsPageMySettingsPage();
 ?>
