@@ -117,5 +117,5 @@ class featured_circles_MySettingsPage
 }
 
 if( is_admin() )
-    $featured_circles_my_settings_page = new featured_circles_MySettingsPageMySettingsPage();
+    $featured_circles_my_settings_page = new featured_circles_MySettingsPage();
 ?>
